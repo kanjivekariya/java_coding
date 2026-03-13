@@ -8,7 +8,7 @@ public class MaximumProductArray {
                     {
                         int temp=ar[i];
                         ar[i]=ar[j];
-                        ar[j]=ar[i];
+                        ar[j]=temp;
                     }
             }
         }
