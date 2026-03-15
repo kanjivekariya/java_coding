@@ -4,15 +4,15 @@ public class longestContingousLength {
         int sum = 0;
         int maxLen = 0;
 
-        for (int right = 0; right < arr.length; right++) {
-            sum += arr[right];
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
 
             while (sum > k) {
                 sum -= arr[left];
                 left++;
             }
 
-            maxLen = Math.max(maxLen, right - left + 1);
+            maxLen = Math.max(maxLen, i - left + 1);
         }
 
         return maxLen;
